@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="Technical Documentation.styles.css" rel="stylesheet">
+        <title>Technical Documentation</title>
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>TECHNICAL DOCUMENTATION</header>
+            <a href="#HTML_Basics" class="nav-link">HTML Basics</a>
+            <a href="#CSS_Selectors" class="nav-link">CSS Selectors</a>
+            <a href="#JavaScript_Events" class="nav-link">JavaScript Events</a>
+            <a href="#API_Integration" class="nav-link">API Integeration</a>
+            <a href="#Web_Components" class="nav-link">Web Components</a>
+            <a href="#Responsive_Design" class="nav-link">Responsive Design</a>
+            <a href="#Debugging_Tools" class="nav-link">Debugging Tools</a>
+        </nav>
+
+        <main id="main-doc">
+            <section id="HTML_Basics" class="main-section">
+                <header>HTML Basics</header>
+
+                <p>HTML stand for HyperText Markup Language.</p>
+                <p>HTML is the standard language for creating webpages.</p>
+                <p>HTML uses tags to structure content on the web.</p>
+                <p>Tags usually come in pairs: an opening tag and a closing tag.</p>
+                <p>Attributes provide additional inforamtion about elements.</p>
+
+                <code>&lt;!DOCTYPE html&gt;</code>
+                <code>&lt;html&gt; &lt/html&gt;</code>
+                <code>&lt;head&gt; &lt;/head&gt;</code>
+                <code>&lt;body&gt; &lt;/body&gt;</code>
+                <code>&lt;title&gt;TECHNICAL DOCUMENTATION&lt;/title&gt;</code>
+
+                <ul>
+                    <li>HTML was created by Tim Berners-Lee.</li>
+                    <li>The first version was published in 1993.</li>
+                    <li>HTML5 is the latest standard.</li>
+                    <li>HTML is interpreted by web browsers.</li>
+                    <li>HTML forms the foundation of the web.</li>
+                </ul>
+            </section>
+
+            <section id="CSS_Selectors" class="main-section">
+                <header>CSS Selectors</header>
+
+                <p>CSS stands for Cascading Style Sheets.</p>
+                <p>CSS is used to style HTML elements.</p>
+                <p>Selectors are patterns used to select elements to style.</p>
+                <p>The universal selector(<span class="highlight">*</span>) selects all elements.</p>
+                <p>The class selector(<span class="highlight">.</span>) targets elements with a specific class.</p>
+
+                <code>h1 {color: blue; }</code>
+                <code>.button { background-color: red; }</code>
+                <code>* {margin: 0; }</code>
+                <code>#id {padding: 10px; }</code>
+                <code>a:hover {text-decoration: underline; }</code>
+
+                <ul>
+                    <li>Element selectors target specific HTML tags.</li>
+                    <li>IDs should be unique in a document.</li>
+                    <li>Selectors can combine for specificity.</li>
+                    <li>Groups of selectors share styles.</li>
+                    <li>Pseudo-classes style states of elements.</li>
+                </ul>
+            </section>
+
+            <section id="JavaScript_Events" class="main-section">
+                <header>JavaScript Events</header>
+
+                <p>JavaScript events are actions or occurencies that happen in the browser, which can be handled by event handlers.</p>
+                <p>The <span class="highlight">click</span> event triggers when a user clicks on an element, such as button or link.</p>
+                <p>The <span class="highlight">mouseover</span>  event activates when a user moves their cursor over a specified element.</p>
+                <p><span class="highlight">keydown</span> and <span class="highlight">keyup</span> events occur when a user presses or releases a key on the keyboard.</p>
+                <p>The <span class="highlight">submit</span> event is fired when a form is submitted, often used to validate data.</p>
+                <p>The <span class="highlight">resize</span> event triggers when the browser window is resized.</p>
+                <p>JavaScript's <span class="highlight">load</span> event fires when a page or an element like an image has fully loaded.</p>
+                <p>The <span class="highlight">scroll</span> event occurs when the users scrolls a webpage or specific element.</p>
+                <p>Custom events allow developers to create and dispatch their own events using <span class="highlight">Event</span> or <span class="highlight">CustomEvent</span>.</p>
+                <p>Adding an event listener with <span class="highlight">addEventListener</span> is the recommended way to manage events.</p>
+
+                <code>document.getElementById("btn").addEventListener("click", function() { alert("Button clicked!"); });</code>
+                <code>window.addEventListener("resize", () => { console.log("Window resized!"); });</code>
+                <code>document.querySelector("input").addEventListener("focus", (e) => { e.target.style.border = "2px solid blue"; });</code>
+                <code>document.querySelector("form").addEventListener("submit", (e) => { e.preventDefault(); alert("Form submitted!"); });</code>
+                <code>const event = new CustomEvent("myEvent", {detail: { message: "Hello!" } }); document.dispatchEvent(event);</code>
+
+                <ul>
+                    <li>Event propagation determines the order in which events are handled(capturing and bubbling phases).</li>
+                    <li>The <span class="highlight">preventDefault()</span> method cancels the browser's default action for an event.</li>
+                    <li>Inline event handlers, like <span class="highlight">onclick</span>, are not recommended due to reduced readability and maintainability.</li>
+                    <li>Event delegation uses a single listener on a parent element to manage events for its children.</li>
+                    <li>The <span class="highlight">once</span> option in <span class="highlight">addEventListener</span> ensures the event listener executes only once.</li>
+                </ul>
+            </section>
+
+            <section id="API_Integration" class="main-section">
+                <header>API Integration</header>
+
+                <p>API Integration enables communication between your application and external systems, allowing data exchange and functionality expansion.</p>
+                <p>RESTful APIs use HTTP methods(GET, POST,PUT, DELETE) to interact with resources on a server.</p>
+                <p>Authentication is a key part of API Integration, commonly implemented using tokens, API keys, or OAuth.</p>
+                <p>The response format of APIs is typically JSON or XML, which ensures data compatability and easy parsing.</p>
+                <p>Error handling in API Integration is crucial; proper error codes like 404(Not Found) or 500(Server Error) help diagnose issues.</p>
+                <p>Throttling and rate limiting control the number of API requests made within a specific period to prevent overloading servers.</p>
+                <p>APIs can be public(open to everyone) or private(restricted to specific users or applications).</p>
+                
+                <code>fetch('https://api.example.com/resource', { method: 'GET' })</code>
+                <code>axios.post('https://api.example.com/resource', { data: { key: 'value' } });</code>
+                <code>curl -X GET "https://api.example.com/resource?param=value" -H "Authorization: Bearer API_KEY"</code>
+                <code>const response = await fetch('https://api.example.com/resource'); const data = await response.json();</code>
+                <code>let headers = { Authorization: 'Bearer YOUR_API_KEY' }; fetch('https://api.example.com/resource', { headers });</code>
+
+                <ul>
+                    <li>Ensure the API's base URL is configured to avoid connection errors.</li>
+                    <li>Use <span class="highlight">try-catch</span> blocks in your code to gracefully handle API response errors.</li>
+                    <li>Validate and sanitize user input before sending it to an API to prevent security vulnerabilities.</li>
+                    <li>Cache frequent API responses to improve application performance and reduce unnecessary calls.</li>
+                    <li>Always check the API documentation for limitations, like rate limits and supported data formats.</li>
+                </ul>
+            </section>
+
+            <section id="Web_Components" class="main-section">
+                <header>Web Components</header>
+                <p>Web Components are a suite of technologies that let you create reusable, encapsulated HTML elements.</p>
+                <p>Shadow DOM provides encapsulation for Web Components, ensuring styles and scripts don't interfere with the rest of the page.</p>
+                <p>The custom elements API allows you to define new HTML tags, extending the capabilities of standard HTML.</p>
+                <p>Templates and slots in Web Components enable efficient and flexible rendering of content.</p>
+                <p>Web Components promote modularity and maintainability,making it easier to manage large applications.</p>
+                <p>The <span class="highlight">template</span> element holds reusable HTML fragments that are parsed but not rendered until cloned.</p>
+                <p>Lifecycle callbacks, such as <span class="highlight">connectedCallback</span> and <span class="highlight">disconnectedCallback</span>, give you control over your component's behavior.</p>
+                <p>Web Components are framework-agnostic, meaning they can be used with any framework or library like React, Angular, or plain JavaScript.</p>
+
+                <code>class MyComponent extends HTMLElement { connectedCallback() { this.innerHTML = "Hello, World!"; } }</code>
+                <code>customElements.define("my-component", MyComponent);</code>
+                <code>&lt;template id="my-template"&gt;&lt;h1&gt;This is a Web Component&lt;/h1&gt;&lt;/template&gt;</code>
+                <code>const template = document.getElementById("my-template").content; document.body.appendChild(template.cloneNode(true));</code>
+                <code>&lt;my-component&gt;&lt;/my-component&gt;</code>
+
+                <ul>
+                    <li>Web Components consist of three main technologies: Shadow DOM, custom elements, and HTML templates.</li>
+                    <li>They help reduce dependencies on large frameworks by providing native capabilities.</li>
+                    <li>Browser support is comprehensive, but polyfills can help fill gaps in older browsers.</li>
+                    <li>Slots allow developers to define where content should be rendered inside components.</li>
+                    <li>You can share Web Components through NPM or custom repositories for easy reuse.</li>
+                </ul>
+            </section>
+
+            <section id="Responsive_Design" class="main-section">
+                <header>Responsive Design</header>
+
+                <p>Responsive design is an approach to web development that ensure websites look and function well on all devices, from desktops to smartphones.</p>
+                <p>Media queries are a key tool in responsive design, allowing developers to apply specific styles based on screen size or device characteristics.</p>
+                <p>Using flexible grid layouts with relative units like percentages helps elements adapt seamlessly to different screen sizes.</p>
+                <p>Responsive images automatically resize to fit their container, ensuring they display properly across devices without distortion.</p>
+                <p>Breakpoints define specific screen widths where the layout adjusts to improve usability and aesthetics.</p>
+                <p>The <span class="highlight">viewport</span> meta tag in HTML is essential for responsive design, allowing the page to scale properly on mobile devices.</p>
+                <p>Mobile-first design priorities smaller screens, progressively adding features and layouts for larger devices.</p>
+
+                <code>@media (max-width: 768px) {body {font-size: 14px; } }</code>
+                <code>img { max-width: 100%; height: auto; }</code>
+                <code>.container { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }</code>
+                <code>meta name="viewport" content="width=device-width, initial-scale=1.0"</code>
+                <code>.menu { display: none; } @media (max-width: 600px) { .menu { display: block; } }</code>
+
+                <ul>
+                    <li>Use a flexible grid layout to ensure elements resize proportionally across devices.</li>
+                    <li>Avoid using fixed-width elements; instead, opt for percentage-based widths.</li>
+                    <li>Test your responsive design on multiple devices and screen resolutions to ensure compatability.</li>
+                    <li>Leverage the <span class="highlight">rem</span> unit for font sizes to maintain proportionally across varying resolutions.</li>
+                    <li>Incorporate touch-friendly elements for better usability on mobile devices.</li>
+                </ul> 
+            </section>
+
+            <section id="Debugging_Tools" class="main-section">
+                <header>Debugging Tools</header>
+
+                <p>Debugging tools are essential for identifying and resolving issues in software development, streamlining the troubleshooting process.</p>
+                <p>The browser's Developer Tools, such as in Chrome and Firefox, provide features like an element inspector, console, and network analyzer.</p>
+                <p>The <span class="highlight">console.log()</span> method is a fundamental debugging tool in JavaScript, allowing developers to track variable values and code flow.</p>
+                <p>Breakpoints in IDEs and browsers let you pause execution at specific lines of code to inspect the program state.</p>
+                <p>Debugging extensions, like React Developer Tools or Redux DevTools, provide specialized insights for specific frameworks.</p>
+                <p>Remote debugging tools allow developers to debug applications running on different devices or platforms, improving cross-device compatability.</p>
+                <p>Automated linting tools like ESLint help catch errors and enforce coding standards during development.</p>
+
+                <code>console.log('Debugging Message:', variable);</code>
+                <code>try { /* code */ } catch (error) { console.error('Error:', error); }</code>
+                <code>debugger; // Pauses execution at this point when Developer Tools are open</code>
+                <code>element.style.backgroundColor = 'yellow'; // Temporarily highlight an element for debugging</code>
+                <code>fetch('url').then(response => response.json()).catch(error => console.error(error));</code>
+
+                <ul>
+                    <li>Use the "Sources" tab in browser Developer Tools to add breakpoints and step through code.</li>
+                    <li>Inspect HTTP requests and responses under the "Network" tab to debug API calls.</li>
+                    <li>Use the "Performance" tab to identify and resolve bottlenecks in rendering or scripting.</li>
+                    <li>The "Console" tab provides real-time logs, warnings, and errors to help trace issues.</li>
+                    <li>Linting tools help catch syntax errors and enforce coding standards before runtime.</li>
+                </ul>
+            </section>
+        </main>
+        <hr class="footer-line"> 
+        <footer name="creator"><span>Code by: EDEN BINONDO</span></footer>
+    </body>
+</html> 
