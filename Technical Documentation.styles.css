@@ -47,7 +47,8 @@ p, code, li {
 
 #navbar .nav-link:hover {
     text-decoration: none;
-    color: rgba(123, 9, 123, 0.267);
+    color: rgb(127, 94, 183);
+    align-text: center;
 }
 
 /* Main Content */
