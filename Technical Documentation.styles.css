@@ -40,9 +40,10 @@ p, code, li {
 #navbar .nav-link {
     display: block;
     margin-bottom: 1em;
-    color: ;
+    color: #7b68ee;
     text-decoration: none;
     text-align: center;
+    transition: transform 0.3s, color 0.3s ease-in-out;
 }
 
 #navbar .nav-link:hover {
