@@ -40,15 +40,15 @@ p, code, li {
 #navbar .nav-link {
     display: block;
     margin-bottom: 1em;
-    color: rgb(127, 94, 183);
+    color: ;
     text-decoration: none;
-    align-text: center;
+    text-align: center;
 }
 
 #navbar .nav-link:hover {
     text-decoration: none;
-    color: rgb(127, 94, 183);
-    align-text: center;
+    color: #7b68ee;
+    text-align: center;
 }
 
 /* Main Content */
