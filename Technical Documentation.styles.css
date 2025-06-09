@@ -40,16 +40,17 @@ p, code, li {
 #navbar .nav-link {
     display: block;
     margin-bottom: 1em;
-    color: #7b68ee;
+    color: #550a87;
     text-decoration: none;
     text-align: center;
     transition: transform 0.3s, color 0.3s ease-in-out;
 }
 
-#navbar .nav-link:hover {
+#navbar a:hover {
     text-decoration: none;
-    color: #7b68ee;
+    color: #da70d6;
     text-align: center;
+    transition: color 0.3s ease-in-out;
 }
 
 /* Main Content */
