@@ -42,10 +42,12 @@ p, code, li {
     margin-bottom: 1em;
     color: rgb(127, 94, 183);
     text-decoration: none;
+    align-text: center;
 }
 
 #navbar .nav-link:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: rgba(123, 9, 123, 0.267);
 }
 
 /* Main Content */
