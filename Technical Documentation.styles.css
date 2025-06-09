@@ -43,14 +43,14 @@ p, code, li {
     color: #550a87;
     text-decoration: none;
     text-align: center;
-    transition: transform 0.3s, color 0.3s ease-in-out;
+
 }
 
-#navbar a:hover {
+#navbar .nav-link:hover {
     text-decoration: none;
     color: #da70d6;
     text-align: center;
-    transition: color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Main Content */
